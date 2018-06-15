@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(plugin ={"pretty" , "html:target"},monochrome = true,
+@CucumberOptions(plugin ={"pretty" , "html:target/test.html"},monochrome = true,
         features= {"src/test/resources/Feature"},
         snippets = SnippetType.CAMELCASE, tags = {""},
         glue = {""}
