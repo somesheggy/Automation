@@ -1,5 +1,6 @@
 Feature: Simple Scenario
 
+  @web
   Scenario: Dvla plate number
     Given I search dvla page
     When I find a plate number
