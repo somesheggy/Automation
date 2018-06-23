@@ -9,24 +9,26 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.IOException;
 
-public class Search {
+public class StartPage {
 
         private WebDriver driver;
+         private String url ="https://www.gov.uk/get-vehicle-information-from-dvla";
 
-        @FindBy(xpath = "//table//tr[@class='heading3']")
-        WebElement search;
+        @FindBy(className = "gem-c-button--start")
+        WebElement start;
 
-        public Search(Driver driver) throws IOException {
+        public StartPage(Driver driver) throws IOException {
 
             WebDriver sdriver = driver.start();
             this.driver = sdriver;
-            //This initElements method will create all WebElements
             PageFactory.initElements(sdriver, this);
+            sdriver.get(url);
+
         }
 
-        public String getHomePageDashboardUserName() {
+        public void start() {
 
-            return search.getText();
+            start.click();
 
         }
 

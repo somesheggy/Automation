@@ -22,16 +22,8 @@ public class Driver {
                 .usingDriverExecutable(new File("src/main/resources/chromedriver"))
                 .usingAnyFreePort()
                 .build();
-
+        service.start();
         ChromeOptions options = new ChromeOptions();
-        // Proxy proxy = new Proxy();
-        // proxy.setHttpProxy("myhttpproxy:3337");
-        // options.setCapability("proxy", proxy);
-        // options.addArguments("--headless");
-        // options.addArguments("--disable-gpu");
-        // options.setAcceptInsecureCerts(true);
-        // options.addArguments("--allow-insecure-localhost");
-        // options.addArguments("--lang=fr-CA");
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(service, options);
 

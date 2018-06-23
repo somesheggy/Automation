@@ -1,39 +1,34 @@
 package com.auto.step;
 
-
-import com.auto.Driver;
-import com.auto.page.object.Search;
-import cucumber.api.PendingException;
+import com.auto.page.object.RegNumbner;
+import com.auto.page.object.StartPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Dvla {
 
-    private Search search;
+    private StartPage startPage;
+    private RegNumbner regNumbner;
 
-    public Dvla(Search searchParam) {
-        this.search = searchParam;
-
-    }
-
-    @Given("I search dvla page")
-    public void i_search_dvla_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public Dvla(StartPage startPage, RegNumbner regNumbner) {
+        this.startPage = startPage;
+        this.regNumbner = regNumbner;
     }
 
     @When("I find a plate number")
     public void i_find_a_plate_number() {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
     }
 
     @Then("Validate the car detail")
     public void validate_the_car_detail() {
         // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
     }
 
-
+    @Given("^I search dvla page for registration \"([^\"]*)\"$")
+    public void iSearchDvlaPageForRegistration(String reg) {
+        startPage.start();
+        regNumbner.search(reg);
+    }
 }
