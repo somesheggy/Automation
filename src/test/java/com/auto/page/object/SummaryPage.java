@@ -16,14 +16,14 @@ public class SummaryPage {
 
     @FindBy(name = "Registration")
     public WebElement RegNos;
-    @FindBy(name = "Maker")
-    public WebElement Make;
-    @FindBy(name = "Color")
-    public WebElement Colour;
     @FindBy(name = "RegistrationLabel")
     public WebElement RegNosLab;
+    @FindBy(name = "Maker")
+    public WebElement Make;
     @FindBy(name = "MakeLabel")
     public WebElement MakeLab;
+    @FindBy(name = "Color")
+    public WebElement Colour;
     @FindBy(name = "ColorLabel")
     public WebElement ColourLab;
 
