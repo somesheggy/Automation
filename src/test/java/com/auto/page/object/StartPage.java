@@ -12,7 +12,7 @@ import java.io.IOException;
 public class StartPage {
 
         private WebDriver driver;
-         private String url ="https://www.gov.uk/get-vehicle-information-from-dvla";
+         private String url ="http://www.gov.uk/get-vehicle-information-from-dvla";
 
         @FindBy(className = "gem-c-button--start")
         WebElement start;
