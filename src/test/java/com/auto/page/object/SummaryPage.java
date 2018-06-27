@@ -37,4 +37,18 @@ public class SummaryPage {
 
     }
 
+    /*public void summary() {
+        //WebDriverWait wait = new WebDriverWait(driver, 10);
+        //wait.until(ExpectedConditions.elementToBeClickable(regSearch));
+        RegNos.getCssValue();
+        Make.getCssValue();
+        Colour.getCssValue();
+    }*/
+
+    public WebDriver driver ()
+    {
+        return this.driver;
+    }
+
+
 }
